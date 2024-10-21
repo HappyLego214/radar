@@ -5,6 +5,11 @@ radar_range = 100
 radar_position = (0,0)
 
 objects_in_area = [(50,30), (5,10), (120,50), (10,500)]
+sectors = {'top-left': [(-100, 0), (0,100)], 
+           'top-right': [(0, 100), (100, 0)],
+           'bottom-left': [(-100, 0), (0, -100)],
+           'bottom-right': [(0, -100), (100, 0)]
+           }
 
 def calcDistance(radar, object):
     distance = math.sqrt(math.pow((radar[0] - object[0]), 2) + math.pow((radar[1] - object[1]), 2))
